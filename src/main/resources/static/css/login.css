@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+#login_ {
+	width: 1200px;
+	margin: 20px auto 10px auto;
+}
+#login_box{
+	width: 600px;
+	height: 300px;
+	margin: 100px auto 0 auto;
+/* 	background-color: orange; */
+}
+#login_box h2{
+	text-align: center;
+}
+#login_box table{
+	margin: 0 auto;
+}
+
+#login_btn_col{
+	text-align: center;
+}
+/* #login_btn_col input[type="submit"], */
+/* #login_btn_col input[type="button"]{ */
+/* 	width: 80px; */
+/* 	height: 40px; */
+/* } */
+
+
+#login_result_{
+	width: 1200px;
+	margin: 20px auto 10px auto;
+	text-align: center;
+}

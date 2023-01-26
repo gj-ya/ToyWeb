@@ -1,0 +1,139 @@
+/* 게시판 메인 */
+#board_home_{
+    width: 1200px;
+    margin: 20px auto;
+}
+
+#board_home_ h1{
+    text-align: center;
+}
+
+#home_table{
+    margin: 20px auto;
+    text-align: center;
+}
+#home_table th{
+    border-bottom: 1px solid black;
+}
+#home_table td{
+    height: 40px;
+}
+#home_table a, #home_table a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+#btn_b{
+    width: 750px;
+    height: 50px;
+    margin: 0 auto;
+}
+#btn_b input[type="button"]{
+    float: right;
+    width: 80px;
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 20px;
+	background-color: black;
+	color: white;
+}
+
+/* 글쓰기 페이지 */
+#board_write_{
+    width: 1200px;
+    margin: 20px auto;
+}
+
+#write_table{
+    width: 800px;
+    margin: 0 auto;
+}
+#title{
+    width: 780px;
+    height: 30px;
+    outline: none;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+#contents{
+    width: 780px;
+    height: 500px;
+    outline: none;
+    padding: 10px 10px;
+    resize: none;
+    margin-top: 20px;
+}
+#btn_box{
+    width: 170px;
+    height: 35px;
+    margin: 0 auto;
+}
+#btn_box input[type="submit"], #btn_box input[type="button"]{
+    margin: auto;
+    width: 80px;
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: black;
+	color: white;
+}
+
+/* 게시판 디테일 */
+#detail_{
+    width: 800px;
+    height: 600px;
+    margin: 20px auto 0 auto;
+    background-color: blanchedalmond;
+}
+
+#detail_title_b{
+    width: 770px;
+    padding: 5px 15px 5px 15px;
+    border-bottom: 1px solid;
+}
+
+#detail_n_t{
+    width: 785px;
+    height: 20px;
+    padding: 0 0 0 15px;
+    border-bottom: 1px solid;
+}
+#detail_n{
+    width: 70%;
+    float: left;
+    margin-top: 1.5px;
+    
+}
+#detail_t{
+    width: 30%;
+    float: left;
+    text-align: right;
+    margin-top: 2px;
+}
+
+#detail_contents_b{
+    width: 770px;
+    min-height: 520px;
+    padding: 10px 15px;
+}
+
+#detail_btn_box{
+    width: 800px;
+    height: 35px;
+    margin: 0 auto;
+}
+#detail_btn_box input[type="button"]{
+    float: right;
+    width: 80px;
+	height: 35px;
+    margin-left: 5px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: black;
+	color: white;
+}

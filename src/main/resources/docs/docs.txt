@@ -1,0 +1,39 @@
+// jsp 한글 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+// css, js 경로 
+<link rel="stylesheet" href="resources/css/commons.css">
+<script type="text/javascript" src="resources/js/commons.js"></script>
+
+<!-- favicon.ico 오류 해결 링크 -->
+<link rel="icon" href="data:;base64, iVBORw0KGgo=">
+
+// jstl 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}" />
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:formatDate value="${list.write_time}" pattern="yyyy-MM-dd HH:mm:ss"/>
+
+<c:forEach items="${list}" varStatus="status" var="list">
+    <tr>
+        <td>${list.member_num}</td>
+        <td>${list.id}</td>
+        <td>${list.pw}</td>
+        <td>${list.email}</td>
+        <td>${list.phone}</td>
+    </tr>
+</c:forEach>
+
+// mybatis > xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.toy.mapper.MembersMapper">
+    <select id="login" parameterType="Map" resultType="Members">
+        select * from sys.toyweb_member where id = #{map.id} and pw = #{map.pw}
+    </select>
+</mapper>

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+#sign_up_{
+	width: 1200px;
+	margin: 20px auto 10px auto;
+}
+#sign_up_ h3{
+	text-align: center;
+}
+#sign_up_ table{
+	margin: 10px auto;
+}
+#sign_up_ table input[type="text"],
+#sign_up_ table input[type="password"]{
+	height: 30px;
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+	padding: 0 5px;
+}
+
+#button_col{
+	text-align: center;
+}
+#button_col input[type="submit"], 
+#button_col input[type="button"]{
+	width: 80px;
+	height: 40px;
+	background-color: black;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+.info_text{
+	width: 150px;
+	height: 70px;
+}
+
+#id_col{
+	width: 270px;
+}
+#id_confirm{
+	width: 90px;
+	height: 30px;
+	background-color: black;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+#id_col input[type="text"]{
+	width: 170px;
+}
+.text_cols input[type="text"],
+.text_cols input[type="password"]{
+	width: 270px;
+}

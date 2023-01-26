@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#manage_{
+	width: 1200px;
+	min-height: 750px;
+	margin: 0 auto;
+}
+
+aside{
+	width: 249px;
+	min-height: 750px;
+	float: left;
+	
+/* 	background-color: gray; */
+}
+#manage_side{
+	margin-top: 30px;
+	padding: 10px 0;
+	background-color: orange;
+}
+#manage_side li{
+	list-style: none;
+	text-align: center;
+	line-height: 2;
+}
+#manage_b{
+	width: 950px;
+	min-height: 750px;
+	float: left;
+/* 	background-color: gray; */
+}
+
+#manage_b table{
+	margin: 20px auto 0 auto;
+	text-align: center;
+}
+#table_top_tr{
+	border-bottom: 1px solid black;
+}

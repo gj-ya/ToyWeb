@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	width: 100%;
+	height: 80px;
+/* 	background-color: skyblue; */
+}
+#head_{
+	width: 1200px;
+	margin: 0 auto;
+	height: 50px;
+/* 	text-align: center; */
+	line-height: 3;
+	background-color: rgb(240, 240, 240);
+}
+#webname_b{
+	width: 70%;
+	float: left;
+}
+#webname_b h3{
+	width: 85px;
+	height: 48px;
+	margin-left: 550px;
+}
+#login_b{
+	width: 30%;
+	float: left;
+	text-align: right;
+/* 	background-color: orange; */
+}
+#login_b input[type="button"]{
+	width: 80px;
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 20px;
+	background-color: black;
+	color: white;
+}
+#head_ a, #head_ a:visited{
+	text-decoration: none;
+	color: black;
+}
+nav{
+	width: 1200px;
+	height: 28px;
+	margin: 0 auto;
+	border-bottom: 1px solid black;
+	
+	background-color: rgb(245, 245, 245);
+}
+nav li{
+	list-style: none;
+	float: left;
+	line-height: 1.8;
+	margin: 0 25px;
+}
+nav ul li:last-child{
+	float: right;
+}
+nav a, nav a:visited{
+	text-decoration: none;
+	color: black;
+}
+
+section{
+	width: 100%;
+	min-height: 750px;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+/* 	background-color: skyblue; */
+}
+#footer_{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 3;
+	background-color: rgb(240, 240, 240);
+}

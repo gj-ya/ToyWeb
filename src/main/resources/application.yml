@@ -1,0 +1,32 @@
+
+spring:
+ devtools:
+    livereload:
+      enabled: true
+      
+ datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//localhost:1521/xe
+    username: system
+    password: 1234
+
+ mvc:
+  view:
+   prefix: /WEB-INF/views/
+   suffix: .jsp
+  static-path-pattern: /resources/**
+
+mybatis:
+ mapper-locations: classpath:mapper/**/*.xml
+ type-aliases-package: com.project.toy.vo
+
+logging:
+ level:
+  org:
+   springframework: info
+  com:
+   ktds:
+    m1: trace
+    
+server:
+ port: 9001
