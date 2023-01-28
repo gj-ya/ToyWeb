@@ -34,11 +34,15 @@
 }
 .info_text{
 	width: 150px;
-	height: 70px;
+	height: 80px;
 }
 
 #id_col{
 	width: 270px;
+}
+label{
+	height: 10px;
+	display: block;
 }
 #id_confirm{
 	width: 90px;

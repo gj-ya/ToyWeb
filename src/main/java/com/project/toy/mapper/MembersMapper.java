@@ -16,4 +16,8 @@ public interface MembersMapper {
 
     // 전체 멤버 정보 매퍼
     List<Members> members_list() throws Exception;
+
+    int id_check(@Param("id") String id) throws Exception;
+
+    void sign_up(@Param("dto") Members dto) throws Exception;
 }

@@ -11,4 +11,13 @@
     <select id="members_list" resultType="Members">
         select * from sys.toyweb_member
     </select>
+
+    <select id="id_check" parameterType="String" resultType="int">
+        select count(*) from sys.toyweb_member where id = #{id}
+    </select>
+
+    <insert id="sign_up" parameterType="Members">
+        insert into sys.toyweb_member values 
+        (sys.toyweb_member_seq.nextval, #{dto.id}, #{dto.pw}, #{dto.email}, #{dto.phone})
+    </insert>
 </mapper>

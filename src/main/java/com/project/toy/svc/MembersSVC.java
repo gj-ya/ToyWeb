@@ -24,4 +24,16 @@ public class MembersSVC implements MembersInter{
 
         return membersMapper.login(map);
     }
+
+    @Override
+    public int id_check(String id) throws Exception{
+
+        return membersMapper.id_check(id);
+    }
+
+    @Override
+    public void sign_up(Members dto) throws Exception{
+
+        membersMapper.sign_up(dto);
+    }
 }

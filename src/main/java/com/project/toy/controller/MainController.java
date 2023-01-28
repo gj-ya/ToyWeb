@@ -1,6 +1,7 @@
 package com.project.toy.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -9,14 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 import com.project.toy.svc.BoardInter;
 import com.project.toy.svc.ManageInter;
 import com.project.toy.svc.MembersInter;
-import com.project.toy.svc.MembersSVC;
 import com.project.toy.vo.BoardDTO;
 import com.project.toy.vo.Members;
 
@@ -45,6 +46,22 @@ public class MainController {
     public String sign_up(){
 
         return "members/sign_up";
+    }
+
+    @RequestMapping("/sign_up_action")
+    public String sign_up_action(@ModelAttribute Members dto) throws Exception{
+        membersInter.sign_up(dto);
+
+        return "redirect:/home";
+    }
+
+    @ResponseBody
+    @RequestMapping("/id_check")
+    public int id_check(@RequestBody HashMap<String, Object> id_txt) throws Exception{
+        String id = String.valueOf(id_txt.get("id"));
+        int result = membersInter.id_check(id);
+
+        return result;
     }
 
     // 로그인 ID, PW 확인
