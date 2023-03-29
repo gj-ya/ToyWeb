@@ -38,7 +38,7 @@
 			<li><a href="calc">계산기</a></li>
 			<li><a href="">D-Day</a></li>
 			<li><a href="calendar">스케줄</a></li>
-			<li><a href="board_home">커뮤니티</a></li>
+			<li><a href="board_home?page=1">커뮤니티</a></li>
 			<li><h4 id="clock"></h4></li>
 		</ul>
 	</nav>

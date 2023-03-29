@@ -4,13 +4,26 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.project.toy.mapper.BoardMapper">
+
+    <!-- 게시글 갯수 카운팅 -->
+    <select id="list_count" resultType="Integer">
+        select count(*) 
+            from sys.toyweb_board
+    </select>
+
     <!-- 게시글 전체출력 -->
-    <select id="board_list" resultType="BoardDTO">
-        select tb.*, tm.id writer 
-            from sys.toyweb_board tb 
-            join sys.toyweb_member tm 
-            on tb.member_num=tm.member_num 
-                order by tb.board_num desc
+    <select id="board_list" parameterType="Integer" resultType="BoardDTO">
+        select * 
+            from 
+                (select ROWNUM rn, jt.*
+                    from
+                        (select tb.*, tm.id writer
+                            from sys.toyweb_board tb 
+                            join sys.toyweb_member tm 
+                            on tb.member_num = tm.member_num 
+                            order by board_num desc) jt
+                )
+            where rn BETWEEN (#{paraPage} * 8 + 1) and ((#{paraPage} + 1) * 8)
     </select>
     
     <!-- 게시글 작성 -->

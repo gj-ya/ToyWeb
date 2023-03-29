@@ -20,6 +20,7 @@ import com.project.toy.svc.ManageInter;
 import com.project.toy.svc.MembersInter;
 import com.project.toy.vo.BoardDTO;
 import com.project.toy.vo.Members;
+import com.project.toy.vo.PageInfo;
 
 @Controller
 public class MainController {
@@ -99,12 +100,29 @@ public class MainController {
     
     // 게시판 첫 페이지로 이동
     @RequestMapping("/board_home")
-    public String board_home(Model model) throws Exception{
+    public String board_home(Model model, @RequestParam int page) throws Exception{
         List<BoardDTO> list = new ArrayList<>();
-        list = boardInter.board_list();
+        PageInfo pageInfo = new PageInfo();
+        int list_count = boardInter.list_count();
+        list = boardInter.board_list(list_count, page);
+        
+        // 페이징
+        int limit=8;
+   		int maxPage = (int)((double)list_count/limit+0.95); 
+   		int startPage = (((int) ((double)page / 10 + 0.9)) - 1) * 10 + 1;
+   	    int endPage = startPage+10-1;
+   	    
+   		if (endPage> maxPage) endPage = maxPage;
+
+   		pageInfo.setEndPage(endPage);
+   		pageInfo.setListCount(list_count);
+		pageInfo.setMaxPage(maxPage);
+		pageInfo.setPage(page);
+		pageInfo.setStartPage(startPage);
 
         // 모델.애드어트리뷰트로 view페이지에 값 넘겨줌
         model.addAttribute("list", list);
+        model.addAttribute("pageInfo", pageInfo);
         return "board/board_home";
     }
 

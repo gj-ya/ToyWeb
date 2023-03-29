@@ -9,8 +9,11 @@ import com.project.toy.vo.BoardDTO;
 
 @Mapper
 public interface BoardMapper {
+    // 게시글 카운팅
+    int list_count() throws Exception;
+    
     // 게시판 전체 출력
-    List<BoardDTO> board_list() throws Exception;
+    List<BoardDTO> board_list(@Param("paraPage") int paraPage) throws Exception;
 
     // 게시글 작성
     void insertBoard(@Param("dto") BoardDTO dto) throws Exception;

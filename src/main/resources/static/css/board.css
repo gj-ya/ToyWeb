@@ -1,4 +1,8 @@
 /* 게시판 메인 */
+#board_main_sec{
+    width: 100%;
+    min-height: 475px;
+}
 #board_home_{
     width: 1200px;
     margin: 20px auto;
@@ -136,4 +140,23 @@
 	cursor: pointer;
 	background-color: black;
 	color: white;
+}
+
+/* 페이징 css */
+#pageList {
+	margin: 10px auto;
+	width: 1200px;
+	height: 25px;
+	text-align: center;
+	flex-direction: row;
+    justify-content: center;
+}
+#pageList a, a:visited{
+	color: black;
+	height: 30px;
+    text-decoration: none;
+}
+#pageList a:hover {
+	/* font-weight: bold; */
+	color: gray;
 }

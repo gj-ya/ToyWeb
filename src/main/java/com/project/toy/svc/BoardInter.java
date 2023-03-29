@@ -5,8 +5,10 @@ import java.util.List;
 import com.project.toy.vo.BoardDTO;
 
 public interface BoardInter {
-    
-    List<BoardDTO> board_list() throws Exception;
+
+    int list_count () throws Exception;
+
+    List<BoardDTO> board_list(int list_count, int page) throws Exception;
     
     // 리턴값 없어서 void
     void insertBoard(BoardDTO dto) throws Exception; 
